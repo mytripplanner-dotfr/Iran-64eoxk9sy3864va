@@ -1,0 +1,457 @@
+{
+  "pays": "Iran",
+  "drapeau": "🇮🇷",
+  "symbole": "🕌",
+  "titre": "Voyage relaxant au cœur de la Perse millénaire",
+  "budget_total": "3200 €",
+  "duree": "21 jours",
+  "temps_vol": "9h40 (depuis Paris CDG, incluant une escale)",
+  "escale": "1",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Téhéran et première immersion",
+      "legende": "Après un long vol, la première journée est dédiée à l'installation et à une douce découverte des environs de votre hôtel. Laissez-vous imprégner par l'ambiance de la capitale iranienne.",
+      "lieu": "Téhéran",
+      "activites": [
+        "<strong>🛬</strong>: Arrivée à l'aéroport international Imam Khomeini (IKA) de Téhéran.",
+        "<strong>🛏️</strong>: Transfert et installation à votre hôtel pour vous reposer.",
+        "<strong>🚶‍♂️</strong>: Première balade relaxante dans le quartier de l'hôtel pour prendre vos marques."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "À savoir",
+          "texte": "Le décalage horaire et la durée du vol peuvent être fatigants. Prévoyez une arrivée en douceur pour bien commencer le séjour."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "👑",
+      "titre": "Splendeurs royales et effervescence du bazar",
+      "legende": "Plongez dans l'histoire impériale de la Perse avec le Palais du Golestan, puis perdez-vous dans les allées animées du Grand Bazar, un véritable labyrinthe de saveurs et de couleurs.",
+      "lieu": "Téhéran",
+      "activites": [
+        "<strong>👑</strong>: Visite du Palais du Golestan, un chef-d'œuvre de l'architecture Qajar, classé à l'UNESCO.",
+        "<strong>🛍️</strong>: Exploration du Grand Bazar de Téhéran, une expérience sensorielle unique pour découvrir l'artisanat et la vie locale.",
+        "<strong>☕</strong>: Pause thé dans une maison de thé traditionnelle du bazar pour une immersion authentique."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Conseil",
+          "texte": "Le Palais du Golestan est vaste, choisissez quelques sections à visiter pour ne pas vous épuiser. Le Grand Bazar est immense, ne craignez pas de vous perdre pour mieux découvrir."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏛️",
+      "titre": "Culture et nature urbaine",
+      "legende": "Découvrez les trésors archéologiques de l'Iran au Musée National, puis échappez à l'agitation urbaine avec une promenade rafraîchissante dans les hauteurs de Darband.",
+      "lieu": "Téhéran",
+      "activites": [
+        "<strong>🏛️</strong>: Visite du Musée National d'Iran pour un aperçu de l'histoire et de la civilisation perses.",
+        "<strong>🌳</strong>: Promenade douce à Darband, un quartier montagnard au nord de Téhéran, réputé pour ses sentiers et ses restaurants en plein air.",
+        "<strong>🍽️</strong>: Dîner relaxant dans l'un des restaurants de Darband, profitant de l'air frais et de la vue."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🚶‍♀️",
+          "titre": "Activité douce",
+          "texte": "La balade à Darband peut être adaptée à votre rythme. Il est possible de simplement profiter des cafés et de l'ambiance sans monter trop haut."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🌸",
+      "titre": "Voyage vers Kashan et jardin paradisiaque",
+      "legende": "Quittez la capitale pour la charmante ville de Kashan, porte d'entrée du désert. Détendez-vous dans la sérénité du Jardin de Fin, un havre de paix persan.",
+      "lieu": "Kashan",
+      "activites": [
+        "<strong>🚌</strong>: Transfert en bus confortable de Téhéran à Kashan (environ 2h30-3h).",
+        "<strong>🛏️</strong>: Installation dans une maison traditionnelle restaurée, typique de Kashan.",
+        "<strong>🌸</strong>: Visite du Jardin de Fin, un jardin persan historique et luxuriant, parfait pour une balade relaxante."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🏡",
+          "titre": "Hébergement",
+          "texte": "Kashan est réputée pour ses maisons traditionnelles transformées en hôtels de charme, offrant une expérience authentique et paisible."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🏠",
+      "titre": "Trésors architecturaux de Kashan",
+      "legende": "Explorez les magnifiques maisons historiques de Kashan, témoins de l'opulence passée, et admirez la grandeur de la Mosquée Agha Bozorg, un joyau architectural.",
+      "lieu": "Kashan",
+      "activites": [
+        "<strong>🏠</strong>: Découverte des maisons historiques de Kashan (Tabatabaei, Borujerdi), célèbres pour leur architecture et leurs décorations.",
+        "<strong>🕌</strong>: Visite de la Mosquée Agha Bozorg, un complexe religieux impressionnant avec une cour intérieure paisible.",
+        "<strong>🚶‍♀️</strong>: Flânerie dans le bazar de Kashan, plus petit et moins agité que celui de Téhéran, idéal pour des achats tranquilles."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🎨",
+          "titre": "Artisanat",
+          "texte": "Kashan est réputée pour ses tapis et ses céramiques. Prenez le temps d'admirer le savoir-faire local."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "✨",
+      "titre": "Vers Ispahan, la Perle de Perse",
+      "legende": "Voyagez vers la légendaire Ispahan, une ville qui enchante par sa beauté. Commencez votre exploration par la majestueuse Place Naqsh-e Jahan, le cœur battant de la ville.",
+      "lieu": "Ispahan",
+      "activites": [
+        "<strong>🚌</strong>: Transfert en bus de Kashan à Ispahan (environ 2h30).",
+        "<strong>🛏️</strong>: Installation à l'hôtel et moment de détente.",
+        "<strong>✨</strong>: Première découverte de la Place Naqsh-e Jahan (Place de l'Imam), classée à l'UNESCO, et de son ambiance en fin de journée."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🌆",
+          "titre": "Ambiance",
+          "texte": "La Place Naqsh-e Jahan est particulièrement magique au coucher du soleil et en soirée, lorsque les lumières illuminent les monuments."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🕌",
+      "titre": "Merveilles de la Place Naqsh-e Jahan",
+      "legende": "Consacrez cette journée à l'exploration approfondie des joyaux architecturaux qui bordent la Place Naqsh-e Jahan : la Mosquée de l'Imam, la Mosquée de Sheikh Lotfollah et le Palais d'Ali Qapu.",
+      "lieu": "Ispahan",
+      "activites": [
+        "<strong>🕌</strong>: Visite de la Mosquée de l'Imam (Masjed-e Shah), un chef-d'œuvre de l'architecture islamique persane.",
+        "<strong>🕌</strong>: Découverte de la Mosquée de Sheikh Lotfollah, réputée pour sa coupole unique et ses motifs délicats.",
+        "<strong>👑</strong>: Exploration du Palais d'Ali Qapu, avec ses fresques et sa salle de musique acoustique."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🚶‍♂️",
+          "titre": "Rythme",
+          "texte": "Prenez votre temps pour admirer les détails de chaque monument. Les cours intérieures offrent des lieux de repos paisibles."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🌉",
+      "titre": "Palais, ponts et douceur de vivre",
+      "legende": "Admirez la beauté du Palais de Chehel Sotoun et ses fresques, puis laissez-vous charmer par les ponts historiques d'Ispahan, lieux de rencontre et de promenade privilégiés.",
+      "lieu": "Ispahan",
+      "activites": [
+        "<strong>🏛️</strong>: Visite du Palais de Chehel Sotoun (Palais aux Quarante Colonnes) et de son jardin.",
+        "<strong>🌉</strong>: Promenade sur le Pont Si-o-seh Pol (Pont aux Trente-trois Arches) et le Pont Khaju, en appréciant l'ambiance locale.",
+        "<strong>☕</strong>: Détente dans un café traditionnel près des ponts, observant la vie quotidienne des Ispahanis."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Les ponts d'Ispahan sont particulièrement photogéniques au lever et au coucher du soleil."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "⛪",
+      "titre": "Quartier arménien et détente",
+      "legende": "Explorez le quartier arménien de Jolfa et sa magnifique Cathédrale de Vank, puis offrez-vous un moment de pure relaxation dans un hammam traditionnel.",
+      "lieu": "Ispahan",
+      "activites": [
+        "<strong>⛪</strong>: Découverte du quartier arménien de Jolfa et visite de la Cathédrale de Vank, un mélange fascinant d'art persan et chrétien.",
+        "<strong>🛍️</strong>: Flânerie dans les boutiques d'artisanat du quartier de Jolfa.",
+        "<strong>🧖‍♀️</strong>: Expérience relaxante dans un hammam traditionnel iranien pour un moment de bien-être authentique."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "💆‍♀️",
+          "titre": "Bien-être",
+          "texte": "Un hammam traditionnel est une excellente façon de se détendre et de s'immerger dans la culture locale après plusieurs jours de visites."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "🏜️",
+      "titre": "Vers Yazd, la ville de terre et de vent",
+      "legende": "Voyagez vers Yazd, une ville unique au cœur du désert, célèbre pour son architecture en pisé et ses \"badgirs\" (tours à vent). Plongez dans l'atmosphère intemporelle de sa vieille ville.",
+      "lieu": "Yazd",
+      "activites": [
+        "<strong>🚌</strong>: Transfert en bus d'Ispahan à Yazd (environ 4h-5h).",
+        "<strong>🛏️</strong>: Installation dans une maison traditionnelle avec vue sur les toits de la vieille ville.",
+        "<strong>🚶‍♂️</strong>: Première exploration de la vieille ville de Yazd, classée à l'UNESCO, avec ses ruelles étroites et ses maisons en pisé."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Climat",
+          "texte": "Yazd est une ville désertique. Prévoyez de l'eau et protégez-vous du soleil, surtout en milieu de journée."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🔥",
+      "titre": "Héritage zoroastrien et architecture unique",
+      "legende": "Découvrez l'héritage zoroastrien de Yazd avec les Tours du Silence et le Temple du Feu. Admirez ensuite l'impressionnant complexe d'Amir Chakhmaq, un symbole de la ville.",
+      "lieu": "Yazd",
+      "activites": [
+        "<strong>🔥</strong>: Visite des Tours du Silence (Dakhmeh), anciens sites funéraires zoroastriens, offrant une vue panoramique.",
+        "<strong>🕯️</strong>: Découverte du Temple du Feu (Atashkadeh), où une flamme sacrée brûle depuis des siècles.",
+        "<strong>🕌</strong>: Exploration du complexe d'Amir Chakhmaq, une structure imposante avec ses arcades et ses minarets."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "📜",
+          "titre": "Histoire",
+          "texte": "Yazd est un centre important pour la communauté zoroastrienne, une des plus anciennes religions monothéistes du monde."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🌅",
+      "titre": "Désert et coucher de soleil magique",
+      "legende": "Échappez à la ville pour une excursion relaxante dans le désert environnant. Profitez d'une balade douce et admirez un coucher de soleil spectaculaire sur les dunes, un moment de pure sérénité.",
+      "lieu": "Yazd",
+      "activites": [
+        "<strong>🚗</strong>: Excursion d'une demi-journée dans le désert proche de Yazd (ex: Bafgh ou Saryazd).",
+        "<strong>🚶‍♀️</strong>: Balade tranquille dans les dunes de sable, appréciant le calme et l'immensité du paysage.",
+        "<strong>🌅</strong>: Admiration du coucher de soleil sur le désert, un spectacle inoubliable et apaisant."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "🧘‍♀️",
+          "titre": "Détente",
+          "texte": "Le désert offre une tranquillité profonde. C'est l'occasion de se ressourcer et de profiter du silence."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "✈️",
+      "titre": "Vol vers Chiraz et jardin d'Éram",
+      "legende": "Prenez un vol intérieur pour rejoindre Chiraz, la ville des poètes et des roses. Commencez votre exploration par la beauté paisible du Jardin d'Éram, un autre joyau persan.",
+      "lieu": "Chiraz",
+      "activites": [
+        "<strong>✈️</strong>: Vol intérieur de Yazd à Chiraz (environ 1h).",
+        "<strong>🛏️</strong>: Installation à l'hôtel et moment de repos.",
+        "<strong>🌳</strong>: Visite du Jardin d'Éram, un magnifique jardin botanique avec son palais Qajar, idéal pour une promenade relaxante."
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "🌹",
+          "titre": "Surnom",
+          "texte": "Chiraz est souvent appelée la \"ville des roses et des rossignols\", reflétant sa beauté et son héritage poétique."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🏛️",
+      "titre": "Majesté de Persépolis et Nécropole",
+      "legende": "Partez pour une excursion d'une journée vers les sites antiques de Persépolis et de la Nécropole de Naqsh-e Rostam, témoins grandioses de l'Empire perse achéménide.",
+      "lieu": "Chiraz",
+      "activites": [
+        "<strong>🚗</strong>: Excursion d'une journée à Persépolis, l'ancienne capitale cérémonielle de l'Empire perse, classée à l'UNESCO.",
+        "<strong>🗿</strong>: Visite de la Nécropole de Naqsh-e Rostam, avec ses tombes royales rupestres et ses bas-reliefs sassanides.",
+        "<strong>🍽️</strong>: Déjeuner dans un restaurant local près des sites pour goûter la cuisine perse."
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection",
+          "texte": "Les sites sont en plein air. Prévoyez chapeau, crème solaire et beaucoup d'eau, surtout si vous visitez en avril/mai."
+        }
+      ]
+    },
+    {
+      "jour": 15,
+      "symbole": "💖",
+      "titre": "Mosquée rose et jardin des orangers",
+      "legende": "Laissez-vous émerveiller par les jeux de lumière de la Mosquée Nasir al-Mulk, surnommée la \"Mosquée Rose\", puis trouvez la sérénité dans le Jardin de Narenjestan, un havre de paix.",
+      "lieu": "Chiraz",
+      "activites": [
+        "<strong>💖</strong>: Visite matinale de la Mosquée Nasir al-Mulk (Mosquée Rose) pour admirer ses vitraux colorés et ses jeux de lumière.",
+        "<strong>🍊</strong>: Exploration du Jardin de Narenjestan (Jardin des Orangers), un petit palais-jardin élégant et paisible.",
+        "<strong>🚶‍♀️</strong>: Balade dans les rues historiques de Chiraz, appréciant l'architecture et l'ambiance."
+      ],
+      "illustration": "jour15.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Meilleur moment",
+          "texte": "Pour la Mosquée Rose, arrivez tôt le matin (entre 7h et 9h) pour profiter pleinement des couleurs et éviter la foule."
+        }
+      ]
+    },
+    {
+      "jour": 16,
+      "symbole": "📜",
+      "titre": "Poésie, bazar et citadelle",
+      "legende": "Rendez hommage au grand poète Hafez dans son mausolée, plongez dans l'animation du Bazar de Vakil, et admirez la Citadelle de Karim Khan, un imposant monument au cœur de la ville.",
+      "lieu": "Chiraz",
+      "activites": [
+        "<strong>📜</strong>: Visite du Mausolée de Hafez, un lieu de pèlerinage pour les Iraniens, empreint de poésie et de sérénité.",
+        "<strong>🛍️</strong>: Exploration du Bazar de Vakil, un des plus beaux bazars traditionnels d'Iran, idéal pour trouver des souvenirs.",
+        "<strong>🏰</strong>: Admiration de la Citadelle de Karim Khan, une forteresse imposante au centre de Chiraz."
+      ],
+      "illustration": "jour16.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "Le Bazar de Vakil est parfait pour acheter des épices, des tissus, des objets en cuivre et des miniatures persanes."
+        }
+      ]
+    },
+    {
+      "jour": 17,
+      "symbole": "✈️",
+      "titre": "Retour à Téhéran et détente urbaine",
+      "legende": "Reprenez un vol intérieur pour Téhéran. Profitez de l'après-midi pour vous détendre ou explorer un quartier plus moderne de la capitale, comme le nord de la ville.",
+      "lieu": "Téhéran",
+      "activites": [
+        "<strong>✈️</strong>: Vol intérieur de Chiraz à Téhéran (environ 1h).",
+        "<strong>🛏️</strong>: Installation à l'hôtel et moment de repos après le voyage.",
+        "<strong>🚶‍♀️</strong>: Balade relaxante dans le quartier de Tajrish, au nord de Téhéran, avec son bazar et son ambiance agréable."
+      ],
+      "illustration": "jour17.jpg",
+      "encarts": [
+        {
+          "symbole": "🏙️",
+          "titre": "Contraste",
+          "texte": "Le nord de Téhéran offre un contraste intéressant avec le sud historique, avec des quartiers plus modernes et des cafés branchés."
+        }
+      ]
+    },
+    {
+      "jour": 18,
+      "symbole": "🏞️",
+      "titre": "Palais d'été et marché local",
+      "legende": "Découvrez les anciens palais d'été des shahs iraniens au complexe de Sa'dabad, niché dans un cadre verdoyant. Terminez la journée par une immersion dans le marché animé de Tajrish.",
+      "lieu": "Téhéran",
+      "activites": [
+        "<strong>🏛️</strong>: Visite du complexe de Sa'dabad, un vaste domaine avec plusieurs palais et musées, parfait pour une promenade douce.",
+        "<strong>🛍️</strong>: Exploration du Bazar de Tajrish, un marché couvert traditionnel où vous trouverez fruits, légumes, épices et artisanat.",
+        "<strong>☕</strong>: Dégustation d'un \"ash\" (soupe iranienne) ou d'un thé dans un des petits restaurants du bazar."
+      ],
+      "illustration": "jour18.jpg",
+      "encarts": [
+        {
+          "symbole": "🌳",
+          "titre": "Nature",
+          "texte": "Le complexe de Sa'dabad est un véritable poumon vert, offrant de l'ombre et de la fraîcheur, idéal pour une journée relaxante."
+        }
+      ]
+    },
+    {
+      "jour": 19,
+      "symbole": "🏘️",
+      "titre": "Excursion au village d'Abyaneh",
+      "legende": "Échappez à l'agitation de la ville pour une excursion d'une journée au pittoresque village d'Abyaneh, connu pour ses maisons rouges et son atmosphère hors du temps. Une véritable bouffée d'air frais.",
+      "lieu": "Abyaneh (depuis Téhéran)",
+      "activites": [
+        "<strong>🚗</strong>: Excursion d'une journée en voiture privée ou taxi vers le village d'Abyaneh (environ 3h de route depuis Téhéran).",
+        "<strong>🚶‍♀️</strong>: Balade paisible dans les ruelles étroites d'Abyaneh, admirant son architecture unique et ses habitants en costumes traditionnels.",
+        "<strong>🍽️</strong>: Déjeuner dans un restaurant local du village, savourant la cuisine régionale."
+      ],
+      "illustration": "jour19.jpg",
+      "encarts": [
+        {
+          "symbole": "🏞️",
+          "titre": "Paysage",
+          "texte": "Abyaneh est niché dans une vallée verdoyante, offrant des vues magnifiques et un cadre très apaisant."
+        }
+      ]
+    },
+    {
+      "jour": 20,
+      "symbole": "🎁",
+      "titre": "Derniers achats et dîner d'adieu",
+      "legende": "Profitez de votre dernière journée à Téhéran pour faire les derniers achats de souvenirs ou revisiter un lieu coup de cœur. Terminez votre voyage par un dîner d'adieu mémorable.",
+      "lieu": "Téhéran",
+      "activites": [
+        "<strong>🛍️</strong>: Temps libre pour les derniers achats de souvenirs ou pour revisiter un musée/quartier apprécié.",
+        "<strong>🚶‍♂️</strong>: Promenade dans un parc ou un jardin de Téhéran pour un moment de calme.",
+        "<strong>🍽️</strong>: Dîner d'adieu dans un restaurant traditionnel avec musique live, pour clôturer le voyage en beauté."
+      ],
+      "illustration": "jour20.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Conseil",
+          "texte": "Pensez à acheter des épices, du safran, des pistaches ou des miniatures persanes comme souvenirs."
+        }
+      ]
+    },
+    {
+      "jour": 21,
+      "symbole": "🛫",
+      "titre": "Départ de Téhéran",
+      "legende": "C'est le moment de dire au revoir à l'Iran, riche de souvenirs et d'expériences. Transfert à l'aéroport pour votre vol retour.",
+      "lieu": "Téhéran",
+      "activites": [
+        "<strong>🛏️</strong>: Petit-déjeuner à l'hôtel.",
+        "<strong>🚗</strong>: Transfert vers l'aéroport international Imam Khomeini (IKA).",
+        "<strong>🛫</strong>: Vol retour vers la France."
+      ],
+      "illustration": "jour21.jpg",
+      "encarts": [
+        {
+          "symbole": "✈️",
+          "titre": "Aéroport",
+          "texte": "Prévoyez suffisamment de temps pour le transfert vers l'aéroport et les formalités d'embarquement."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    { "titre": "Budget vol:", "legende": "570 €/pers (A/R depuis Paris CDG)", "symbole": "🛬" },
+    { "titre": "Budget transports:", "legende": "300-350 €/pers (vols intérieurs, bus, taxis)", "symbole": "🚆" },
+    { "titre": "Budget repas:", "legende": "700-750 €/pers (21 jours, budget moyen)", "symbole": "🥗" },
+    { "titre": "Budget logement:", "legende": "1100-1200 €/pers (20 nuits, hôtels 3* ou maisons traditionnelles)", "symbole": "🛏️" },
+    { "titre": "Budget activités:", "legende": "200-250 €/pers (entrées sites, excursions, hammam)", "symbole": "🎭" }
+  ],
+  "periodes_ideales": [
+    { "titre": "Avril-Mai", "symbole": "🌸" },
+    { "titre": "Septembre-Octobre", "symbole": "🍂" }
+  ],
+  "infos_pratiques": [
+    { "titre": "Visa obligatoire: Obtenez votre visa avant le départ. Les formalités peuvent prendre du temps.", "symbole": "🛂" },
+    { "titre": "Code vestimentaire: Les femmes doivent porter le foulard et des vêtements amples. Les hommes doivent éviter les shorts en public.", "symbole": "👗" },
+    { "titre": "Monnaie: Le Rial iranien est la monnaie officielle, mais le Toman est couramment utilisé (1 Toman = 10 Rials). Les cartes de crédit internationales ne fonctionnent pas, prévoyez du liquide (euros ou dollars) à changer sur place.", "symbole": "💰" },
+    { "titre": "Langue: Le Farsi est la langue officielle. L'anglais est parlé dans les hôtels et sites touristiques.", "symbole": "🗣️" },
+    { "titre": "Sécurité: L'Iran est généralement un pays sûr pour les touristes. Respectez les coutumes locales et restez informé de la situation politique.", "symbole": "🛡️" },
+    { "titre": "Internet: Achetez une carte SIM locale (Irancell, MCI) à l'arrivée pour avoir accès à internet et aux appels.", "symbole": "📶" }
+  ],
+  "liens_utiles": [
+    { "legende": "Vols", "titre": "Réserve ton vol", "url": "https://www.kayak.fr/flights/CDG-IKA/2026-04-15/2026-05-06", "symbole": "🛬" },
+    { "legende": "Infos officielles et inspirations", "titre": "Visit Iran", "url": "https://www.visitiran.ir/", "symbole": "📘" },
+    { "legende": "Météo", "titre": "Météo Iran", "url": "https://www.accuweather.com/fr/ir/iran-weather", "symbole": "🌤️" },
+    { "legende": "Conseils aux voyageurs", "titre": "France Diplomatie", "url": "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/iran/", "symbole": "⚠️" }
+  ]
+}
