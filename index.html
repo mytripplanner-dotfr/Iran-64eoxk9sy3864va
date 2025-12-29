@@ -1,0 +1,809 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage relaxant au cœur de la Perse millénaire </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Téhéran et première immersion</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Splendeurs royales et effervescence du bazar</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Culture et nature urbaine</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Voyage vers Kashan et jardin paradisiaque</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Trésors architecturaux de Kashan</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Vers Ispahan, la Perle de Perse</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Merveilles de la Place Naqsh-e Jahan</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Palais, ponts et douceur de vivre</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Quartier arménien et détente</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Vers Yazd, la ville de terre et de vent</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Héritage zoroastrien et architecture unique</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Désert et coucher de soleil magique</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Vol vers Chiraz et jardin d'Éram</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Majesté de Persépolis et Nécropole</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Mosquée rose et jardin des orangers</a>
+            
+                <a href="#jour-16" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J16 Poésie, bazar et citadelle</a>
+            
+                <a href="#jour-17" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J17 Retour à Téhéran et détente urbaine</a>
+            
+                <a href="#jour-18" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J18 Palais d'été et marché local</a>
+            
+                <a href="#jour-19" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J19 Excursion au village d'Abyaneh</a>
+            
+                <a href="#jour-20" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J20 Derniers achats et dîner d'adieu</a>
+            
+                <a href="#jour-21" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J21 Départ de Téhéran</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">IRAN</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Voyage relaxant au cœur de la Perse millénaire</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 21 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 3200 €</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 9h40 (depuis Paris CDG, incluant une escale)</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Téhéran et première immersion</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long vol, la première journée est dédiée à l'installation et à une douce découverte des environs de votre hôtel. Laissez-vous imprégner par l'ambiance de la capitale iranienne.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛬</strong>: Arrivée à l'aéroport international Imam Khomeini (IKA) de Téhéran.</li><li><strong>🛏️</strong>: Transfert et installation à votre hôtel pour vous reposer.</li><li><strong>🚶‍♂️</strong>: Première balade relaxante dans le quartier de l'hôtel pour prendre vos marques.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Le décalage horaire et la durée du vol peuvent être fatigants. Prévoyez une arrivée en douceur pour bien commencer le séjour.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Splendeurs royales et effervescence du bazar</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans l'histoire impériale de la Perse avec le Palais du Golestan, puis perdez-vous dans les allées animées du Grand Bazar, un véritable labyrinthe de saveurs et de couleurs.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>👑</strong>: Visite du Palais du Golestan, un chef-d'œuvre de l'architecture Qajar, classé à l'UNESCO.</li><li><strong>🛍️</strong>: Exploration du Grand Bazar de Téhéran, une expérience sensorielle unique pour découvrir l'artisanat et la vie locale.</li><li><strong>☕</strong>: Pause thé dans une maison de thé traditionnelle du bazar pour une immersion authentique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">Le Palais du Golestan est vaste, choisissez quelques sections à visiter pour ne pas vous épuiser. Le Grand Bazar est immense, ne craignez pas de vous perdre pour mieux découvrir.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Culture et nature urbaine</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez les trésors archéologiques de l'Iran au Musée National, puis échappez à l'agitation urbaine avec une promenade rafraîchissante dans les hauteurs de Darband.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏛️</strong>: Visite du Musée National d'Iran pour un aperçu de l'histoire et de la civilisation perses.</li><li><strong>🌳</strong>: Promenade douce à Darband, un quartier montagnard au nord de Téhéran, réputé pour ses sentiers et ses restaurants en plein air.</li><li><strong>🍽️</strong>: Dîner relaxant dans l'un des restaurants de Darband, profitant de l'air frais et de la vue.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♀️ Activité douce</p>
+                                <p class="text-gray-700">La balade à Darband peut être adaptée à votre rythme. Il est possible de simplement profiter des cafés et de l'ambiance sans monter trop haut.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Voyage vers Kashan et jardin paradisiaque</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Quittez la capitale pour la charmante ville de Kashan, porte d'entrée du désert. Détendez-vous dans la sérénité du Jardin de Fin, un havre de paix persan.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚌</strong>: Transfert en bus confortable de Téhéran à Kashan (environ 2h30-3h).</li><li><strong>🛏️</strong>: Installation dans une maison traditionnelle restaurée, typique de Kashan.</li><li><strong>🌸</strong>: Visite du Jardin de Fin, un jardin persan historique et luxuriant, parfait pour une balade relaxante.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🏡 Hébergement</p>
+                                <p class="text-gray-700">Kashan est réputée pour ses maisons traditionnelles transformées en hôtels de charme, offrant une expérience authentique et paisible.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Trésors architecturaux de Kashan</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez les magnifiques maisons historiques de Kashan, témoins de l'opulence passée, et admirez la grandeur de la Mosquée Agha Bozorg, un joyau architectural.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏠</strong>: Découverte des maisons historiques de Kashan (Tabatabaei, Borujerdi), célèbres pour leur architecture et leurs décorations.</li><li><strong>🕌</strong>: Visite de la Mosquée Agha Bozorg, un complexe religieux impressionnant avec une cour intérieure paisible.</li><li><strong>🚶‍♀️</strong>: Flânerie dans le bazar de Kashan, plus petit et moins agité que celui de Téhéran, idéal pour des achats tranquilles.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎨 Artisanat</p>
+                                <p class="text-gray-700">Kashan est réputée pour ses tapis et ses céramiques. Prenez le temps d'admirer le savoir-faire local.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vers Ispahan, la Perle de Perse</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Voyagez vers la légendaire Ispahan, une ville qui enchante par sa beauté. Commencez votre exploration par la majestueuse Place Naqsh-e Jahan, le cœur battant de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚌</strong>: Transfert en bus de Kashan à Ispahan (environ 2h30).</li><li><strong>🛏️</strong>: Installation à l'hôtel et moment de détente.</li><li><strong>✨</strong>: Première découverte de la Place Naqsh-e Jahan (Place de l'Imam), classée à l'UNESCO, et de son ambiance en fin de journée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌆 Ambiance</p>
+                                <p class="text-gray-700">La Place Naqsh-e Jahan est particulièrement magique au coucher du soleil et en soirée, lorsque les lumières illuminent les monuments.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Merveilles de la Place Naqsh-e Jahan</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Consacrez cette journée à l'exploration approfondie des joyaux architecturaux qui bordent la Place Naqsh-e Jahan : la Mosquée de l'Imam, la Mosquée de Sheikh Lotfollah et le Palais d'Ali Qapu.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🕌</strong>: Visite de la Mosquée de l'Imam (Masjed-e Shah), un chef-d'œuvre de l'architecture islamique persane.</li><li><strong>🕌</strong>: Découverte de la Mosquée de Sheikh Lotfollah, réputée pour sa coupole unique et ses motifs délicats.</li><li><strong>👑</strong>: Exploration du Palais d'Ali Qapu, avec ses fresques et sa salle de musique acoustique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♂️ Rythme</p>
+                                <p class="text-gray-700">Prenez votre temps pour admirer les détails de chaque monument. Les cours intérieures offrent des lieux de repos paisibles.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Palais, ponts et douceur de vivre</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Admirez la beauté du Palais de Chehel Sotoun et ses fresques, puis laissez-vous charmer par les ponts historiques d'Ispahan, lieux de rencontre et de promenade privilégiés.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏛️</strong>: Visite du Palais de Chehel Sotoun (Palais aux Quarante Colonnes) et de son jardin.</li><li><strong>🌉</strong>: Promenade sur le Pont Si-o-seh Pol (Pont aux Trente-trois Arches) et le Pont Khaju, en appréciant l'ambiance locale.</li><li><strong>☕</strong>: Détente dans un café traditionnel près des ponts, observant la vie quotidienne des Ispahanis.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Les ponts d'Ispahan sont particulièrement photogéniques au lever et au coucher du soleil.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Quartier arménien et détente</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez le quartier arménien de Jolfa et sa magnifique Cathédrale de Vank, puis offrez-vous un moment de pure relaxation dans un hammam traditionnel.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>⛪</strong>: Découverte du quartier arménien de Jolfa et visite de la Cathédrale de Vank, un mélange fascinant d'art persan et chrétien.</li><li><strong>🛍️</strong>: Flânerie dans les boutiques d'artisanat du quartier de Jolfa.</li><li><strong>🧖‍♀️</strong>: Expérience relaxante dans un hammam traditionnel iranien pour un moment de bien-être authentique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💆‍♀️ Bien-être</p>
+                                <p class="text-gray-700">Un hammam traditionnel est une excellente façon de se détendre et de s'immerger dans la culture locale après plusieurs jours de visites.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vers Yazd, la ville de terre et de vent</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Voyagez vers Yazd, une ville unique au cœur du désert, célèbre pour son architecture en pisé et ses "badgirs" (tours à vent). Plongez dans l'atmosphère intemporelle de sa vieille ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚌</strong>: Transfert en bus d'Ispahan à Yazd (environ 4h-5h).</li><li><strong>🛏️</strong>: Installation dans une maison traditionnelle avec vue sur les toits de la vieille ville.</li><li><strong>🚶‍♂️</strong>: Première exploration de la vieille ville de Yazd, classée à l'UNESCO, avec ses ruelles étroites et ses maisons en pisé.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Climat</p>
+                                <p class="text-gray-700">Yazd est une ville désertique. Prévoyez de l'eau et protégez-vous du soleil, surtout en milieu de journée.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Héritage zoroastrien et architecture unique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez l'héritage zoroastrien de Yazd avec les Tours du Silence et le Temple du Feu. Admirez ensuite l'impressionnant complexe d'Amir Chakhmaq, un symbole de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🔥</strong>: Visite des Tours du Silence (Dakhmeh), anciens sites funéraires zoroastriens, offrant une vue panoramique.</li><li><strong>🕯️</strong>: Découverte du Temple du Feu (Atashkadeh), où une flamme sacrée brûle depuis des siècles.</li><li><strong>🕌</strong>: Exploration du complexe d'Amir Chakhmaq, une structure imposante avec ses arcades et ses minarets.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📜 Histoire</p>
+                                <p class="text-gray-700">Yazd est un centre important pour la communauté zoroastrienne, une des plus anciennes religions monothéistes du monde.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Désert et coucher de soleil magique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Échappez à la ville pour une excursion relaxante dans le désert environnant. Profitez d'une balade douce et admirez un coucher de soleil spectaculaire sur les dunes, un moment de pure sérénité.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗</strong>: Excursion d'une demi-journée dans le désert proche de Yazd (ex: Bafgh ou Saryazd).</li><li><strong>🚶‍♀️</strong>: Balade tranquille dans les dunes de sable, appréciant le calme et l'immensité du paysage.</li><li><strong>🌅</strong>: Admiration du coucher de soleil sur le désert, un spectacle inoubliable et apaisant.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧘‍♀️ Détente</p>
+                                <p class="text-gray-700">Le désert offre une tranquillité profonde. C'est l'occasion de se ressourcer et de profiter du silence.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vol vers Chiraz et jardin d'Éram</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Prenez un vol intérieur pour rejoindre Chiraz, la ville des poètes et des roses. Commencez votre exploration par la beauté paisible du Jardin d'Éram, un autre joyau persan.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>✈️</strong>: Vol intérieur de Yazd à Chiraz (environ 1h).</li><li><strong>🛏️</strong>: Installation à l'hôtel et moment de repos.</li><li><strong>🌳</strong>: Visite du Jardin d'Éram, un magnifique jardin botanique avec son palais Qajar, idéal pour une promenade relaxante.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌹 Surnom</p>
+                                <p class="text-gray-700">Chiraz est souvent appelée la "ville des roses et des rossignols", reflétant sa beauté et son héritage poétique.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Majesté de Persépolis et Nécropole</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Partez pour une excursion d'une journée vers les sites antiques de Persépolis et de la Nécropole de Naqsh-e Rostam, témoins grandioses de l'Empire perse achéménide.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗</strong>: Excursion d'une journée à Persépolis, l'ancienne capitale cérémonielle de l'Empire perse, classée à l'UNESCO.</li><li><strong>🗿</strong>: Visite de la Nécropole de Naqsh-e Rostam, avec ses tombes royales rupestres et ses bas-reliefs sassanides.</li><li><strong>🍽️</strong>: Déjeuner dans un restaurant local près des sites pour goûter la cuisine perse.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection</p>
+                                <p class="text-gray-700">Les sites sont en plein air. Prévoyez chapeau, crème solaire et beaucoup d'eau, surtout si vous visitez en avril/mai.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Mosquée rose et jardin des orangers</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Laissez-vous émerveiller par les jeux de lumière de la Mosquée Nasir al-Mulk, surnommée la "Mosquée Rose", puis trouvez la sérénité dans le Jardin de Narenjestan, un havre de paix.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>💖</strong>: Visite matinale de la Mosquée Nasir al-Mulk (Mosquée Rose) pour admirer ses vitraux colorés et ses jeux de lumière.</li><li><strong>🍊</strong>: Exploration du Jardin de Narenjestan (Jardin des Orangers), un petit palais-jardin élégant et paisible.</li><li><strong>🚶‍♀️</strong>: Balade dans les rues historiques de Chiraz, appréciant l'architecture et l'ambiance.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Meilleur moment</p>
+                                <p class="text-gray-700">Pour la Mosquée Rose, arrivez tôt le matin (entre 7h et 9h) pour profiter pleinement des couleurs et éviter la foule.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-16" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 16</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Poésie, bazar et citadelle</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Rendez hommage au grand poète Hafez dans son mausolée, plongez dans l'animation du Bazar de Vakil, et admirez la Citadelle de Karim Khan, un imposant monument au cœur de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>📜</strong>: Visite du Mausolée de Hafez, un lieu de pèlerinage pour les Iraniens, empreint de poésie et de sérénité.</li><li><strong>🛍️</strong>: Exploration du Bazar de Vakil, un des plus beaux bazars traditionnels d'Iran, idéal pour trouver des souvenirs.</li><li><strong>🏰</strong>: Admiration de la Citadelle de Karim Khan, une forteresse imposante au centre de Chiraz.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour16.jpg" class="w-full h-64 object-cover" alt="Jour 16">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Le Bazar de Vakil est parfait pour acheter des épices, des tissus, des objets en cuivre et des miniatures persanes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-17" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 17</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à Téhéran et détente urbaine</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Reprenez un vol intérieur pour Téhéran. Profitez de l'après-midi pour vous détendre ou explorer un quartier plus moderne de la capitale, comme le nord de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>✈️</strong>: Vol intérieur de Chiraz à Téhéran (environ 1h).</li><li><strong>🛏️</strong>: Installation à l'hôtel et moment de repos après le voyage.</li><li><strong>🚶‍♀️</strong>: Balade relaxante dans le quartier de Tajrish, au nord de Téhéran, avec son bazar et son ambiance agréable.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour17.jpg" class="w-full h-64 object-cover" alt="Jour 17">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🏙️ Contraste</p>
+                                <p class="text-gray-700">Le nord de Téhéran offre un contraste intéressant avec le sud historique, avec des quartiers plus modernes et des cafés branchés.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-18" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 18</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Palais d'été et marché local</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez les anciens palais d'été des shahs iraniens au complexe de Sa'dabad, niché dans un cadre verdoyant. Terminez la journée par une immersion dans le marché animé de Tajrish.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏛️</strong>: Visite du complexe de Sa'dabad, un vaste domaine avec plusieurs palais et musées, parfait pour une promenade douce.</li><li><strong>🛍️</strong>: Exploration du Bazar de Tajrish, un marché couvert traditionnel où vous trouverez fruits, légumes, épices et artisanat.</li><li><strong>☕</strong>: Dégustation d'un "ash" (soupe iranienne) ou d'un thé dans un des petits restaurants du bazar.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour18.jpg" class="w-full h-64 object-cover" alt="Jour 18">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌳 Nature</p>
+                                <p class="text-gray-700">Le complexe de Sa'dabad est un véritable poumon vert, offrant de l'ombre et de la fraîcheur, idéal pour une journée relaxante.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-19" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 19</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Excursion au village d'Abyaneh</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Échappez à l'agitation de la ville pour une excursion d'une journée au pittoresque village d'Abyaneh, connu pour ses maisons rouges et son atmosphère hors du temps. Une véritable bouffée d'air frais.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗</strong>: Excursion d'une journée en voiture privée ou taxi vers le village d'Abyaneh (environ 3h de route depuis Téhéran).</li><li><strong>🚶‍♀️</strong>: Balade paisible dans les ruelles étroites d'Abyaneh, admirant son architecture unique et ses habitants en costumes traditionnels.</li><li><strong>🍽️</strong>: Déjeuner dans un restaurant local du village, savourant la cuisine régionale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour19.jpg" class="w-full h-64 object-cover" alt="Jour 19">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🏞️ Paysage</p>
+                                <p class="text-gray-700">Abyaneh est niché dans une vallée verdoyante, offrant des vues magnifiques et un cadre très apaisant.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-20" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 20</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers achats et dîner d'adieu</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de votre dernière journée à Téhéran pour faire les derniers achats de souvenirs ou revisiter un lieu coup de cœur. Terminez votre voyage par un dîner d'adieu mémorable.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛍️</strong>: Temps libre pour les derniers achats de souvenirs ou pour revisiter un musée/quartier apprécié.</li><li><strong>🚶‍♂️</strong>: Promenade dans un parc ou un jardin de Téhéran pour un moment de calme.</li><li><strong>🍽️</strong>: Dîner d'adieu dans un restaurant traditionnel avec musique live, pour clôturer le voyage en beauté.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour20.jpg" class="w-full h-64 object-cover" alt="Jour 20">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">Pensez à acheter des épices, du safran, des pistaches ou des miniatures persanes comme souvenirs.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-21" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 21</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Téhéran</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le moment de dire au revoir à l'Iran, riche de souvenirs et d'expériences. Transfert à l'aéroport pour votre vol retour.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛏️</strong>: Petit-déjeuner à l'hôtel.</li><li><strong>🚗</strong>: Transfert vers l'aéroport international Imam Khomeini (IKA).</li><li><strong>🛫</strong>: Vol retour vers la France.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Iran-64eoxk9sy3864va/main/jour21.jpg" class="w-full h-64 object-cover" alt="Jour 21">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Aéroport</p>
+                                <p class="text-gray-700">Prévoyez suffisamment de temps pour le transfert vers l'aéroport et les formalités d'embarquement.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>570 €/pers (A/R depuis Paris CDG)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>300-350 €/pers (vols intérieurs, bus, taxis)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>700-750 €/pers (21 jours, budget moyen)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>1100-1200 €/pers (20 nuits, hôtels 3* ou maisons traditionnelles)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>200-250 €/pers (entrées sites, excursions, hammam)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Avril-Mai</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Septembre-Octobre</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🛂 Visa obligatoire: Obtenez votre visa avant le départ. Les formalités peuvent prendre du temps.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">👗 Code vestimentaire: Les femmes doivent porter le foulard et des vêtements amples. Les hommes doivent éviter les shorts en public.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💰 Monnaie: Le Rial iranien est la monnaie officielle, mais le Toman est couramment utilisé (1 Toman = 10 Rials). Les cartes de crédit internationales ne fonctionnent pas, prévoyez du liquide (euros ou dollars) à changer sur place.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗣️ Langue: Le Farsi est la langue officielle. L'anglais est parlé dans les hôtels et sites touristiques.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🛡️ Sécurité: L'Iran est généralement un pays sûr pour les touristes. Respectez les coutumes locales et restez informé de la situation politique.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">📶 Internet: Achetez une carte SIM locale (Irancell, MCI) à l'arrivée pour avoir accès à internet et aux appels.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Iran-64eoxk9sy3864va/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.kayak.fr/flights/CDG-IKA/2026-04-15/2026-05-06" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛬 Réserve ton vol</strong></a></li>
+                    
+                        <li><a href="https://www.visitiran.ir/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Visit Iran</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/ir/iran-weather" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo Iran</strong></a></li>
+                    
+                        <li><a href="https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/iran/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>⚠️ France Diplomatie</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
